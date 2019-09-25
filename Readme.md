@@ -1,13 +1,16 @@
-1. Install XAMPP
-2. Install Composer
-3. Create project using command : composer create-project symfony/skeleton symphart
-4. Modify httpd-vhosts.conf(path : xampp > apahce > conf > extra > httpd-vhosts.conf)
+# Set up
+
+- Install XAMPP
+- Install Composer
+- Create project using command : composer create-project symfony/skeleton symphart
+- Modify httpd-vhosts.conf(path : xampp > apahce > conf > extra > httpd-vhosts.conf)
 <VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/symphart/public"
     ServerName symphart.test
 </VirtualHost>
-5. Add "127.0.0.1	symphart.test" into hosts file.
-6. Add .htaccess on Public folder
+
+- Add "127.0.0.1	symphart.test" into hosts file.
+- Add .htaccess on Public folder
  <IfModule mod_rewrite.c>
     RewriteEngine On
 
@@ -23,5 +26,6 @@
     # Rewrite all other queries to the front controller.
     RewriteRule .? %{ENV:BASE}/index.php [L]
 </IfModule>
-7. composer require annotations(ref.https://symfony.com/doc/current/routing.html)
-8. composer require twig
+
+- composer require annotations(ref.https://symfony.com/doc/current/routing.html)
+- composer require twig
