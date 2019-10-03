@@ -37,3 +37,11 @@
 
 - composer require annotations(ref.https://symfony.com/doc/current/routing.html)
 - composer require twig
+
+
+- composer require doctrine maker
+- php bin/console doctrine:database:create
+- php bin/console make:entity Article
+- php bin/console doctrine:migrations:diff
+- php bin/console doctrine:migrations:migrate
+- php bin/console doctrine:query:sql 'SELECT * from article'
